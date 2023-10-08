@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.Musiclife.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.example.Musiclife.library.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.Musiclife.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.example.Musiclife.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
+    <action
+        android:id="@+id/action_global_playerFragment"
+        app:destination="@id/playerFragment">
+
+        <argument
+            android:name="song_title"
+            app:argType="string" />
+        <argument
+            android:name="artist_name"
+            app:argType="string" />
+        <argument
+            android:name="song_url"
+            app:argType="string" />
+        <argument
+            android:name="image_url"
+            app:argType="string" />
+    </action>
+</navigation>
